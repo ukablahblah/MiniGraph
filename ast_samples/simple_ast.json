@@ -1,0 +1,41 @@
+[
+  {
+    "type": "assign",
+    "var": "x",
+    "expr": {
+      "type": "op",
+      "name": "input",
+      "args": [
+        "2",
+        "2"
+      ]
+    }
+  },
+  {
+    "type": "assign",
+    "var": "y",
+    "expr": {
+      "type": "op",
+      "name": "matmul",
+      "args": [
+        "x",
+        "x"
+      ]
+    }
+  },
+  {
+    "type": "assign",
+    "var": "z",
+    "expr": {
+      "type": "op",
+      "name": "relu",
+      "args": [
+        "y"
+      ]
+    }
+  },
+  {
+    "type": "output",
+    "var": "z"
+  }
+]

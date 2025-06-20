@@ -1,0 +1,17 @@
+?start: statement+
+
+?statement: assign_stmt | output_stmt
+
+assign_stmt: NAME "=" expr
+output_stmt: "output" "(" NAME ")"
+
+?expr: op_call | NAME | NUMBER
+
+op_call: NAME "(" [args] ")"
+args: (NAME | NUMBER) ("," (NAME | NUMBER))*
+
+NAME: /[a-zA-Z_][a-zA-Z0-9_]*/
+NUMBER: /[0-9]+/
+
+%import common.WS
+%ignore WS
